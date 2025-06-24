@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Mail, Lock, AlertCircle } from 'lucide-react';
+import { User, Lock, AlertCircle } from 'lucide-react';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { AnimatedInput } from './AnimatedInput';
@@ -92,32 +92,32 @@ export const LoginForm: React.FC<LoginFormProps> = ({ onSuccess }) => {
     }
   };
 
-  const fillAdminCredentials = () => {
-    setValue('email', 'admin@nutrizone.com');
-    setValue('password', '@adminNutrizone');
-    clearErrors();
-    clearError();
-    setFormError(null);
-    clearValidationErrors();
-  };
+  // const fillAdminCredentials = () => {
+  //   setValue('email', 'admin@nutrizone.com');
+  //   setValue('password', '@adminNutrizone');
+  //   clearErrors();
+  //   clearError();
+  //   setFormError(null);
+  //   clearValidationErrors();
+  // };
 
   return (
     <div className="space-y-6 animate-slideIn">
       <div className="text-center">
-        <button
+        {/* <button
           type="button"
           onClick={fillAdminCredentials}
           className="text-xs text-muted-foreground hover:text-primary transition-colors duration-200 border border-dashed border-muted-foreground hover:border-primary rounded px-2 py-1"
         >
           📧 Usar credenciales de admin (demo)
-        </button>
+        </button> */}
       </div>
 
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
         <AnimatedInput
-          icon={Mail}
+          icon={User}
           type="email"
-          placeholder="Ingresa tu email"
+          placeholder="Ingresa tu DNI"
           value={watchedEmail}
           onChange={(e) => handleInputChange('email', e.target.value)}
           error={errors.email?.message}

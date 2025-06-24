@@ -1,7 +1,7 @@
 import React from 'react';
 import { LoginForm } from './LoginForm';
 import { RegisterForm } from './RegisterForm';
-import { UserRound, UserPlus } from 'lucide-react';
+import { UserRound } from 'lucide-react';
 
 interface AuthTabsProps {
   activeTab: 'login' | 'register';
@@ -37,7 +37,7 @@ export const AuthTabs: React.FC<AuthTabsProps> = ({
             <span className="absolute inset-0 bg-white/10 animate-pulse-slow opacity-0 hover:opacity-100 transition-opacity"></span>
           )}
         </button>
-        <button
+        {/* <button
           className={`
             flex-1 px-5 py-3 font-semibold text-sm transition-all duration-300 ease-in-out
             rounded-lg relative overflow-hidden flex items-center justify-center gap-2
@@ -53,7 +53,7 @@ export const AuthTabs: React.FC<AuthTabsProps> = ({
           {activeTab === 'register' && (
             <span className="absolute inset-0 bg-white/10 animate-pulse-slow opacity-0 hover:opacity-100 transition-opacity"></span>
           )}
-        </button>
+        </button> */}
       </div>
       
       {/* Tab Content */}

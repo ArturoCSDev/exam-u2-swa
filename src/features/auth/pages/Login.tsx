@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { AuthHeader } from '../components/AuthHeader';
 import { AuthTabs } from '../components/AuthTabs';
-import { AuthFooter } from '../components/AuthFooter';
 import { useLogin } from '../hooks/useLogin';
 
 export const Login: React.FC = () => {
@@ -74,10 +73,10 @@ export const Login: React.FC = () => {
         </div>
 
         {/* Footer */}
-        <AuthFooter 
+        {/* <AuthFooter 
           currentTab={currentTab}
           onTabChange={handleTabChange}
-        />
+        /> */}
         
         {/* Slogan fitness */}
         <div className="mt-8 text-center text-white/70 text-sm font-medium animate-pulse">
